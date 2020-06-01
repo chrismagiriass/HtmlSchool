@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssignmentsPerStudentPerCourse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 15px;
+            }
+            </style>
+            <script>function clickButton(){
+
+              console.log('yes button has been clicked')
+              Swal.fire(
+        'Success!',
+        'You deleted the course!',
+        'success'
+      )
+          }
+
+          function save(){
+            console.log('course has ben saved')
+            Swal.fire('The Course is saved!')
+          }
+          
+          function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+          </script>
+</head>
+<body>
+    
+    <div align="center">
+        <p style="font-size:50px;">Assignments Per Student Per Course</p>
+        <p style="font-size:30px;">Courses</p>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" style="text-align:center"width="15%">Students</th>
+                <th scope="col" style="text-align:center"width="20%" colspan="2">Java FullTime</th>
+                <th scope="col" style="text-align:center"width="20%" colspan="2">Java PartTime</th>
+                <th scope="col" style="text-align:center"width="20%" colspan="2">C# FullTime</th>
+                <th scope="col" style="text-align:center"width="20%" colspan="2">C# PartTime</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-active">
+               
+                <td style="text-align:center">Chris Mageirias</td>
+                <td style="text-align:center">CB9P1JAVA</td>
+                <td style="text-align:center">CB9P2JAVA</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center">CB10P1C#</td>
+                <td style="text-align:center">CB10P2C#</td>
+              </tr>
+              <tr>
+                <td style="text-align:center">George Mageirias</td>
+                <td style="text-align:center">CB9P1JAVA</td>
+                <td style="text-align:center">CB9P2JAVA</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center">CB10P1C#</td>
+                <td style="text-align:center">CB10P2C#</td>
+                 </tr>
+              <tr class="table-primary">
+                <td style="text-align:center">Dimitris Dimitriou</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center">CB10P1JAVA</td>
+                <td style="text-align:center">CB10P2JAVA</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+              </tr>
+              <tr class="table-secondary">
+                <td style="text-align:center">Petros Petropoulos</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center">CB9P1C#</td>
+                <td style="text-align:center">CB9P2C#</td>
+                <td style="text-align:center"></td>
+                <td style="text-align:center"></td>
+                  </tr>
+                  <tr>
+                    <td style="text-align:center">Nikos Nikolaou</td>
+                    <td style="text-align:center">CB9P1JAVA</td>
+                    <td style="text-align:center">CB9P2JAVA</td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center"></td>
+                    <td style="text-align:center">CB10P1C#</td>
+                    <td style="text-align:center">CB10P2C#</td>
+                     </tr>
+                     <tr class="table-primary">
+                        <td style="text-align:center">Kwstas Kwstopoulos</td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center">CB10P1JAVA</td>
+                        <td style="text-align:center">CB10P2JAVA</td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                      </tr>
+                      <tr class="table-secondary">
+                        <td style="text-align:center">Giwrgos Gewrgiou</td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center">CB10P1JAVA</td>
+                        <td style="text-align:center">CB10P2JAVA</td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                        <td style="text-align:center"></td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:center">Spuros Spurakis</td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center"></td>
+                            <td style="text-align:center">CB10P1C#</td>
+                            <td style="text-align:center">CB10P2C#</td>
+                             </tr>
+                             <tr class="table-primary">
+                                <td style="text-align:center">Mixalis Mixalopoulos</td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center">CB10P1JAVA</td>
+                                <td style="text-align:center">CB10P2JAVA</td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                              </tr>
+                              <tr class="table-secondary">
+                                <td style="text-align:center">Vasilis Vasileiou</td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center">CB10P1JAVA</td>
+                                <td style="text-align:center">CB10P2JAVA</td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                <td style="text-align:center"></td>
+                                  </tr>
+  </table>
+  <button type="button" class="btn btn-warning" onclick="window.location.href='School.html';">Go to Main Menu</button>
+      
+    </div>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Form</h1>
+    
+        <label for="email"><b>Id</b></label>
+        <input type="text" placeholder="Enter Id" name="email" required>
+    
+        <label for="psw"><b>Course</b></label>
+        <input type="text" placeholder="Enter Course" name="psw" required>
+
+        <label for="psw"><b>Start Date</b></label>
+        <input type="text" placeholder="Start Date" name="psw" required>
+    
+        <button type="button" class="btn" onclick="save()">Save</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+      </form>
+    </div>
+</body>
+</html>
